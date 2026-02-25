@@ -17,6 +17,9 @@ app.get("/youtube-suggest", async (req, res) => {
   res.json(data);
 });
 
-app.listen(5000, "192.168.0.101", () => {
-  console.log("Server running on 192.168.0.101:5000");
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
